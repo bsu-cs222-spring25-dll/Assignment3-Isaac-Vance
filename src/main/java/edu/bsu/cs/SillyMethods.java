@@ -1,14 +1,18 @@
 package edu.bsu.cs;
-import java.util.Scanner;
-public class SillyMethods {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int inputNumber = scan.nextInt();
-        System.out.print("Your wacky number is: "+WackyNumberGenerator(inputNumber));
 
+public class SillyMethods {
+    public boolean didGuess42(int guess) {
+        return guess == 42;
     }
-    public static int WackyNumberGenerator(int startingNumber){
-        return 45*(startingNumber/34);
+    public String countTo(int max) {
+
+        StringBuilder result = new StringBuilder();
+        for (int x = 0; x <= max; x++) {
+            result.append(x);
+            if (x < max) {
+                result.append(" ");
+            }
+        }
+        return result.toString();
     }
 }
